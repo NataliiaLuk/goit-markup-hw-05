@@ -115,7 +115,9 @@ img {
 
 .nav-list {
     display: flex;
+
 }
+
 
 .nav-list .item:not(:last-child) {
     margin-right: 50px;
@@ -124,6 +126,8 @@ img {
 
 
 .navigation-link {
+    position: relative;
+
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -139,6 +143,24 @@ img {
 .navigation-link:hover,
 .navigation-link:focus {
     color: var(--accent-cl);
+}
+
+.navigation-link.active::after,
+.navigation-link:hover::after,
+.navigation-link:focus  {
+content: '';
+display: block;
+position: absolute;
+bottom: 0;
+left: 0;
+
+
+width: 100%;
+height: 4px;
+
+border-radius: 2px;
+background-color: var(--accent-cl);
+
 }
 
 .navigation .active {
@@ -315,6 +337,7 @@ img {
 }
 
 .activity-type {
+    position: relative;
     margin-right: 30px;
 }
 
@@ -322,6 +345,28 @@ img {
     margin-right: 0;
 }
 
+.activity-descr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+
+    background-color: rgba(47, 48, 58, 0.80);
+
+    color: var(--white-cl);
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+}
 .team {
     background-color: var(--light-bg);
 }
@@ -621,9 +666,10 @@ img {
 
 .cards-link {
     text-decoration: none;
+    display: block;
 }
 
-.item > .cards-link:hover,
-.item > .cards-link:focus {
+.cards-link:hover,
+.cards-link:focus {
         box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
