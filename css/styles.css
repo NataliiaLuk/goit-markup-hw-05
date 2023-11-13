@@ -151,8 +151,7 @@ img {
 }
 
 
-.navigation-link:hover::after,
-.navigation-link:focus::after,
+
  .navigation-link.active::after{
 content: '';
 display: block;
@@ -212,7 +211,7 @@ background-color: var(--accent-cl);
 }
 
 .contact-icon {
-   transition: color var(--standard);
+   transition: fill var(--standard);
 }
 
 .email:hover .contact-icon,
@@ -617,7 +616,7 @@ transition: fill var(--standard);
     margin-right: 0;
 }
 
-.gallery .btn {
+.btn.filter {
     border-radius: 4px;
     padding: 6px 22px;
     flex-shrink: 0;
@@ -631,7 +630,7 @@ transition: fill var(--standard);
         line-height: 1.62;
         letter-spacing: 0.48px;
 
-    transition: color background-color box-shadow var(--standard);
+    transition: color var(--standard), background-color var(--standard), box-shadow var(--standard);
 }
 
 .btn.active {
@@ -748,7 +747,9 @@ transition: fill var(--standard);
 }
 
 .back-drop.is-hidden .modal-wrapper {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: translate(-50%, -50%) scale(0.9);
+    visibility: hidden;
+
 }
 
 .modal-wrapper {
@@ -761,8 +762,10 @@ transition: fill var(--standard);
     background: var(--white-cl);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     
-    transform: translate(-50%, -50%) scale(1);
-    transition: scale var(--standard);
+    transform: translate(-50%, -50%) scale(1.1);
+    visibility: visible;
+    transition: scale var(--standard),
+    visibility var(--standard);
 }
 
 
@@ -778,17 +781,12 @@ transition: fill var(--standard);
     padding: 0;
     background-color: var(--white-cl);
     border-radius: 50%;
-    border: 1px;
-    border-color: rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.10);
 
     cursor: pointer;
 }
 
-.btn-close {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
+
 
 
 
