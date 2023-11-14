@@ -737,7 +737,9 @@ transition: fill var(--standard);
     z-index: 10;
 
     opacity: 1;
-    transition: opacity var(--standard);
+    visibility: visible;
+    transition: opacity var(--standard),
+    visibility var(--standard);
 }
 
 .back-drop.is-hidden {
@@ -748,7 +750,6 @@ transition: fill var(--standard);
 
 .back-drop.is-hidden .modal-wrapper {
     transform: translate(-50%, -50%) scale(0.9);
-    visibility: hidden;
 
 }
 
@@ -763,9 +764,7 @@ transition: fill var(--standard);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     
     transform: translate(-50%, -50%) scale(1.1);
-    visibility: visible;
-    transition: scale var(--standard),
-    visibility var(--standard);
+    transition: scale var(--standard);
 }
 
 
